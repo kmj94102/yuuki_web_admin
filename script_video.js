@@ -59,7 +59,7 @@ function handleUpdateWithServer(videoList) {
       });
     const remove = el("img", {
       class: "remove",
-      src: '/img_close.png',
+      src: './img_close.png',
       'data-document-id': item['documentId'],
       'data-collection': 'video'
     })
@@ -86,7 +86,7 @@ function handleUpdate(address, documentId) {
     });
   const remove = el("img", {
     class: "remove",
-    src: '/img_close.png',
+    src: './img_close.png',
     'data-document-id': documentId,
     'data-collection': 'video'
   })
