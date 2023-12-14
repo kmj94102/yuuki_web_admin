@@ -1,4 +1,4 @@
-import { shortsInsert, fetchShorts, updateShorts, deleteShorts, showLoading, hideLoading } from '/firebase.js'
+import { shortsInsert, fetchShorts, updateShorts, deleteShorts, showLoading, hideLoading } from './firebase.js'
 
 function extractShortsId(url) {
   let shortsId = '';

@@ -1,4 +1,4 @@
-import { uploadImage, fetchImages, updateImage, deleteImage, showLoading, hideLoading } from '/firebase.js'
+import { uploadImage, fetchImages, updateImage, deleteImage, showLoading, hideLoading } from './firebase.js'
 
 var input = document.getElementById("input");
 var initLabel = document.getElementById("label");

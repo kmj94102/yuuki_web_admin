@@ -1,4 +1,4 @@
-import { videoInsert, fetchVideos, updateVideo, deleteVideo, showLoading, hideLoading } from '/firebase.js'
+import { videoInsert, fetchVideos, updateVideo, deleteVideo, showLoading, hideLoading } from './firebase.js'
 
 function extractVideoId(url) {
   let videoId = '';
