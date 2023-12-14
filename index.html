@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuuki web admin</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js" integrity="sha512-zYXldzJsDrNKV+odAwFYiDXV2Cy37cwizT+NkuiPGsa9X1dOz04eHvUWVuxaJ299GvcJT31ug2zO4itXBjFx4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <section class="header">
+        <ul>
+            <li class="menu active" data-target="videoContent">Video</li>
+            <li class="menu" data-target="shortsContent">Shorts</li>
+            <li class="menu" data-target="imageContent">Image</li>
+        </ul>
+        <span id="login">로그인</span>
+    </section>
+    <section id="videoContent" class="content active">
+        <span>新しい video 追加</span>
+        <span>追加したいYouTube映像のアドレスを入力してください</span>
+        <span>再生できることを確認後、登録してください</span>
+        <input type="text" id="videoUrl">
+        <div class="videoContainer">
+            <iframe id="videoIframe" allowfullscreen></iframe>
+        </div>
+        <div id="addVideo" class="addButton">追加</div>
+        <div class="divider"></div>
+        <div id="videoPreview"></div>
+        <span>Drag & Dropで順番を変えることができます!<br>変更したら、完了ボタンを押してください。</span>
+        <div id="updateVideo" class="addButton">完了</div>
+    </section>
+
+    <section id="shortsContent" class="content">
+        <span>新しい shorts 追加</span>
+        <span>追加したいYouTube映像のアドレスを入力してください</span>
+        <span>再生できることを確認後、登録してください</span>
+        <input type="text" id="shortsUrl">
+        <div class="shortsContainer">
+            <iframe id="shortsIframe" allowfullscreen></iframe>
+        </div>
+        <div id="addShorts" class="addButton">追加</div>
+        <div class="divider"></div>
+        <div id="shortsPreview"></div>
+        <span>Shortsは複数登録は可能ですが、順番に3つ目までしかサイトに表示されません。</span>
+        <div id="updateShorts" class="addButton">完了</div>
+    </section>
+    
+    <section id="imageContent" class="content">
+        <label class="label" id="label" for="input">
+            <div class="inner" id="inner">画像をここにドロップするか、クリックして画像を選択してください</div>
+        </label>
+        <input id="input" class="input" accept="image/*" type="file" required="true" multiple="true" hidden="true">
+        <div class="preview" id="preview"></div>
+        <p class="preview-decription">リストで画像が切り捨てられたように見えるかもしれませんが<br>切り捨てられない状態で画像が保存されます。<br><br>画像は何枚かアップロードできますが、1番から10番の画像だけホームページから出ます。<br>下の順番を参考に画像の順番を決めて、完了ボタンを押してください！</p>
+        <div id="updateImage" class="addButton" style="margin-top: 0px; margin-bottom:20px;">完了</div>
+        <img class="guide" src="guide.png">
+    </section>
+
+    <div class="loading">
+        <lottie-player class="loading-item" src="loading.json" background="transparent" speed="1" style="width: 300px; height: 300px" direction="1" mode="normal" loop autoplay></lottie-player>
+    </div>
+    
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script type="module" src="main.js"></script>
+    <script type="module" src="script_image.js"></script>
+    <script type="module" src="script_video.js"></script>
+    <script type="module" src="script_shorts.js"></script>
+
+    <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js" ></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" ></script>
+</body>
+</html>

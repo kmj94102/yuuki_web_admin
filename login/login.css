@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #111111;
+}
+@property --a
+{
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+@keyframes animate
+{
+    0%
+    {
+        --a: 0deg;
+    }
+    100%
+    {
+        --a: 360deg;
+    }
+}
+.box
+{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: repeating-conic-gradient(from var(--a), #35E1A9 0%,
+    #35E1A9 5%, transparent 5%, transparent 35%, #35E1A9 50%);
+    animation: animate 4s linear infinite;
+    border-radius: 20px;
+}
+.box::before
+{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: repeating-conic-gradient(from var(--a), #35E1A9 0%,
+    #35E1A9 5%, transparent 5%, transparent 35%, #35E1A9 50%);
+    animation: animate 4s linear infinite;
+    border-radius: 20px;
+    animation-delay: -1s;
+}
+.box::after
+{
+    content: '';
+    position: absolute;
+    inset: 8px;
+    background: #111111;
+    border-radius: 15px;
+    border: 9px solid #111111;
+}
+.box form
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 40px;
+    z-index: 1000;
+}
+
+.box form h2
+{
+    color: white;
+    font-weight: 600;
+}
+.box form input
+{
+    position: relative;
+    width: 85%;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 15px;
+    border: none;
+    color: white;
+    outline: none;
+    border-radius: 5px;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+}
+.box form input::placeholder
+{
+    color: rgba(255, 255, 255, 0.5);
+}
+.box form input[type="submit"]
+{
+    font-weight: 600;
+    background: white;
+    color: #111111;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.box form input[type="submit"]:hover
+{
+    background: #35E1A9;
+}

@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body
+{
+    background: #111111;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 40px;
+}
+.header 
+{
+    display:flex;
+    max-width: 1200px;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px 0px;
+}
+#login
+{
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #35E1A9;
+    cursor: pointer;
+}
+ul
+{
+    display: flex;
+    gap: 40px;
+}
+ul li
+{
+    position: relative;
+    list-style: none;
+    width: 100%;
+    font-size: 1.2em;
+    color: white;
+    cursor: pointer;
+}
+ul li.active
+{
+    color: #35E1A9;
+    border-bottom: 1px solid;
+    padding-bottom: 1px;
+}
+.content
+{
+    width: 100%;
+    max-width: 1200px;
+    min-height: 200px;
+    background: #333;
+    padding: 30px;
+    margin: 0 10px;
+    display: none;
+    flex-flow: column;
+    align-items: center;
+    border-radius: 20px;
+}
+.content.active
+{
+    display: flex;
+}
+#videoContent span
+{
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+}
+#videoContent span:nth-child(1)
+{
+    font-size: 1.4em;
+    font-weight: 600;
+    text-align: center;
+}
+#videoContent input[type="text"]
+{
+    width: 100%;
+    max-width: 350px;
+    margin: 10px;
+}
+.videoContainer 
+{
+    position: relative;
+    width: 100%;
+    height: 0;
+    max-width: 1000px;
+    /* 16:9 비율을 유지하기 위한 값 (9 / 16 * 100) */
+    padding-bottom: 56.25%; 
+}
+#videoIframe
+ {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.addButton
+{
+    color: white;
+    background: #35E1A9;
+    padding: 5px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.divider
+{
+    width: 100%;
+    height: 1px;
+    background: white;
+    margin: 20px 0;
+}
+#videoPreview {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding: 16px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    align-items: center;
+    width: 100%;
+    border: 3px solid #35E1A9;
+}
+.container-video{
+    width: 100%;
+    object-position: center;
+    object-fit: cover;
+    position: relative;
+}
+.embed-video{
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+
+#shortsContent span
+{
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+}
+#shortsContent span:nth-child(1)
+{
+    font-size: 1.4em;
+    font-weight: 600;
+    text-align: center;
+}
+#shortsContent input[type="text"]
+{
+    width: 100%;
+    max-width: 350px;
+    margin: 10px;
+}
+.shortsContainer 
+{
+    position: relative;
+    width: 100%;
+    height: 0;
+    max-width: 1000px;
+    /* 16:9 비율을 유지하기 위한 값 (9 / 16 * 100) */
+    padding-bottom: 56.25%; 
+}
+#shortsIframe
+ {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.addButton
+{
+    color: white;
+    background: #35E1A9;
+    padding: 5px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+#shortsPreview {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding: 16px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    align-items: center;
+    width: 100%;
+    border: 3px solid #35E1A9;
+}
+.container-shorts{
+    width: 100%;
+    object-position: center;
+    object-fit: cover;
+    position: relative;
+}
+.embed-shorts{
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+
+
+.filebox
+{
+    display: flex;
+} 
+.filebox .upload-name {
+    display: inline-block;
+    height: 40px;
+    width: 300px;
+    padding: 0 10px;
+    vertical-align: middle;
+    border: 1px solid #dddddd;
+    color: #999999;
+}
+.filebox label {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    vertical-align: middle;
+    background-color: #999999;
+    cursor: pointer;
+    height: 40px;
+    margin-left: 10px;
+}
+.filebox input[type="file"] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+}
+#selectedImage
+{
+    max-width: 400px;
+    margin-top: 20px;
+}
+.container-img
+{
+    position: relative;
+}
+#imageList img
+{
+    width: 100px;
+}
+
+list-item {
+  padding: 0.8em 0;
+  border-radius: 0.2em;
+  margin: 1em auto;
+  border: 1px solid #000000;
+  text-align: center;
+}
+.list-item:hover {
+  cursor: move;
+  background-color: #35E1A9;
+  border-color: #35E1A9;
+  color: #8673f2;
+}
+
+
+
+
+
+/* 이지미 업로드 */
+.label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.inner {
+    font-size: 1.5em;
+    color: white;
+    width: 100%;
+    text-align: center;
+    border: 3px dashed #35E1A9;
+    border-radius: 20px;
+    line-height: 100px;
+    font-weight: bold;
+}
+
+@media (any-hover: hover){
+    .inner:hover{
+      background-color: var(--hoverBg);
+    }
+}
+
+.label--hover{
+    background-color: var(--hoverBg);
+}
+
+.preview-title{
+    font-size: 1.5em;
+    color: white;
+    margin-bottom: 8px;
+    margin-top: 20px;
+}
+
+.preview-decription{
+    color: white;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.preview {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    padding: 16px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    align-items: center;
+    width: 100%;
+    border: 3px solid #35E1A9;
+}
+.guide {
+    width: 70%;
+}
+
+.embed-img{
+    width: 100%;
+    height: 128px;
+    object-position: center;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.remove
+{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.loading
+{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background: #111111C0;
+    overflow: hidden;
+    display: none;
+}
+.loading-item
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
